@@ -1,0 +1,41 @@
+{"id": 1, "name": "Bryan Alonso", "role": "user", "age": 31 }
+{"id": 2, "name": "ChatGPT", "role": "assistant", "age": null }
+{"id": 3, "conversation_id": "4df6c823-88ed-4879-89c4-07efb2d34d19", "parent_id": null, "created_at": "2024-06-15T12:00:00Z"}
+{"id": 4, "message": "The error message `failed parsing config: /etc/loki/local-config.yaml: yaml: unmarshal errors: line 24: field volume_enabled not found in type validation.plain.` indicates that there is an issue with the configuration file for Loki. Specifically, it suggests that the field `volume_enabled` is not recognized in the context where it is being used.\n\nTo resolve this issue, you should:\n\n1. Open the `local-config.yaml` file located at `/etc/loki/`.\n2. Locate line 24 and check the context in which `volume_enabled` is being used.\n3. Verify if `volume_enabled` is a valid configuration option for the version of Loki you are using. You can refer to the [Loki documentation](https://grafana.com/docs/loki/latest/configuration/) for the correct configuration options.\n4. If `volume_enabled` is not a valid option, you may need to remove it or replace it with the correct option based on your requirements.\n5. After making the necessary changes, save the file and restart the Loki service to apply the new configuration.\n\nIf you continue to experience issues, please provide more details about your Loki configuration and version for further assistance." }
+{"id": 5, "message": "To fix the error related to `volume_enabled`, you can try adding or modifying the `limits_config` section in your Loki configuration file (`local-config.yaml`). Here’s an example of how you might adjust your configuration:\n\n```yaml\n# ...existing code...\nlimits_config:\n  split_queries_by_interval: 0\n# ...existing code...\n```\n\nMake sure to replace or add this section appropriately within your existing configuration structure. After making these changes, save the file and restart your Loki service to see if the issue is resolved." }
+{"id": 6, "message": "After updating your Loki configuration file (`local-config.yaml`), you can restart the Loki service using Docker Compose with the following command:\n\n```bash\ndocker-compose restart loki\n```\n\nThis command will restart only the Loki service defined in your `docker-compose.yml` file, applying any changes you've made to its configuration." }
+{"id": 7, "message": "Test data", "role":  "admin", "age": 31 }
+{"id": 8, "message": "Test data 2", "role": "operator", "age": 40}
+{"id": 9, "message": "Test data", "role": "operator", "age": 31 }
+{"id": 9, "message": "Test data", "role": "viewer", "age": 32 }
+{"id": 10, "message": "Test data", "role": "admin", "age": 29 }
+{"id": 11, "message": "Test data", "role": "viewer", "age": 35 }
+{"id": 12, "message": "Test data", "role": "operator", "age": 38 }
+{"id": 13, "message": "Test data", "role": "admin", "age": 45 }
+{"id": 14, "message": "Test data", "role": "viewer", "age": 28 }
+{"id": 15, "message": "Test data", "role": "operator", "age": 33 }
+{"id": 16, "message": "Test data", "role": "admin", "age": 37 }
+{"id": 17, "message": "Test data", "role": "viewer", "age": 30 }
+{"id": 18, "message": "Test data", "role": "operator", "age": 42 }
+{"id": 19, "message": "Test data", "role": "admin", "age": 34 }
+{"id": 20, "message": "Test data", "role": "viewer", "age": 39 }
+{"id": 21, "message": "Test data", "role": "operator", "age": 36 }
+{"id": 22, "message": "Test data", "role": null, "age": null }
+{"id": 23, "message": "Test data", "role": "viewer23", "age": 50 }
+{"id": 24, "message": "Test data", "role": "viewer24", "age": 34 }
+{"id": 25, "message": "Test data25", "role": "admin", "age": 34 }
+{"id": 26, "message": "Test data26", "role": "admin", "age": 34 }
+{"id": 27, "message": "Test data27", "role": "admin", "age": 34 }
+{"id": 28, "message": "Test data28", "role": "admin", "age": 34 }
+{"id": 29, "message": "Test data28", "role": "admin", "age": 29 }
+{"id": 30, "message": "Test data28", "role": "admin", "age": 30 }
+{"id": 31, "message": "Test data28", "role": "admin", "age": 31 }
+{"id": 32, "message": "Test data28", "role": "admin", "age": 32 }
+{"id": 33, "message": "Test data28", "role": "admin", "age": 33 }
+{"id": 34, "message": "Test data28", "role": "admin", "age": 34 }
+{"id": 35, "message": "Test data28", "role": "admin", "age": 35 }
+{"id": 36, "message": "Test data28", "role": "admin", "age": 36 }
+{"id": 37, "message": "Test data28", "role": "admin", "age": 37 }
+{"id": 38, "message": "Test data28", "role": "admin", "age": 38 }
+{"id": 39, "message": "Test data28", "role": "admin", "age": 39 }
+{"id": 40, "message": "Test data28", "role": "admin", "age": 40 }
